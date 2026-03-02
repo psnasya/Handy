@@ -1,522 +1,522 @@
-!DOCTYPE html
-html lang=ru
-head
-    meta charset=UTF-8
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    titleHandy — made with soultitle
-    !-- Подключение Font Awesome для иконок --
-    link rel=stylesheet href=httpscdnjs.cloudflare.comajaxlibsfont-awesome6.0.0-beta3cssall.min.css
-    style
-         {
-            margin 0;
-            padding 0;
-            box-sizing border-box;
-            font-family 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handy — товары для рукоделия</title>
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
         }
 
         body {
-            background-color #ffffff;  чистый белый фон 
-            color #1e1e2a;
-            line-height 1.5;
+            background-color: #ffffff; /* чистый белый фон */
+            color: #1e1e2a;
+            line-height: 1.5;
         }
 
         .container {
-            max-width 1300px;
-            margin 0 auto;
-            padding 0 30px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 30px;
         }
 
-         --- Шапка (логотип слева сверху) --- 
+        /* --- Шапка (логотип слева сверху) --- */
         .header {
-            padding 30px 0 20px;
-            border-bottom 1px solid #f0e9e9;
+            padding: 30px 0 20px;
+            border-bottom: 1px solid #f0e9e9;
         }
 
         .header .container {
-            display flex;
-            justify-content space-between;
-            align-items center;
-            flex-wrap wrap;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
         }
 
         .logo-area {
-            display flex;
-            align-items baseline;
+            display: flex;
+            align-items: baseline;
         }
 
         .logo {
-            font-size 2.2rem;
-            font-weight 500;
-            letter-spacing -0.5px;
-            color #2b2b3b;
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            color: #2b2b3b;
         }
 
         .logo span {
-            font-weight 300;
-            color #b8a7a7;
-            font-size 1.8rem;
+            font-weight: 300;
+            color: #b8a7a7;
+            font-size: 1.8rem;
         }
 
         .tagline {
-            margin-left 15px;
-            font-size 0.9rem;
-            color #8f8ba8;
-            font-weight 300;
-            letter-spacing 0.3px;
+            margin-left: 15px;
+            font-size: 0.9rem;
+            color: #8f8ba8;
+            font-weight: 300;
+            letter-spacing: 0.3px;
         }
 
-         навигация и иконки 
+        /* навигация и иконки */
         .nav-icons {
-            display flex;
-            gap 25px;
-            color #4a4a5e;
+            display: flex;
+            gap: 25px;
+            color: #4a4a5e;
         }
 
         .nav-icons i {
-            font-size 1.3rem;
-            cursor default;
-            transition color 0.2s;
+            font-size: 1.3rem;
+            cursor: default;
+            transition: color 0.2s;
         }
 
-        .nav-icons ihover {
-            color #c9ab9a;
+        .nav-icons i:hover {
+            color: #c9ab9a;
         }
 
-         --- Поиск и фильтры --- 
+        /* --- Поиск и фильтры --- */
         .toolbar {
-            padding 25px 0 20px;
-            display flex;
-            flex-wrap wrap;
-            gap 15px;
-            align-items center;
-            justify-content space-between;
+            padding: 25px 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .search-bar {
-            flex 1 1 300px;
-            display flex;
-            border 1px solid #eae2e2;
-            border-radius 40px;
-            padding 5px 5px 5px 20px;
-            background white;
-            box-shadow 0 2px 6px rgba(0,0,0,0.01);
+            flex: 1 1 300px;
+            display: flex;
+            border: 1px solid #eae2e2;
+            border-radius: 40px;
+            padding: 5px 5px 5px 20px;
+            background: white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.01);
         }
 
         .search-bar input {
-            flex 1;
-            border none;
-            outline none;
-            padding 10px 0;
-            font-size 1rem;
-            background transparent;
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 10px 0;
+            font-size: 1rem;
+            background: transparent;
         }
 
         .search-bar button {
-            background #f3efef;
-            border none;
-            border-radius 40px;
-            padding 10px 25px;
-            font-size 0.95rem;
-            color #4e4e61;
-            cursor default;
-            transition 0.15s;
-            font-weight 500;
+            background: #f3efef;
+            border: none;
+            border-radius: 40px;
+            padding: 10px 25px;
+            font-size: 0.95rem;
+            color: #4e4e61;
+            cursor: default;
+            transition: 0.15s;
+            font-weight: 500;
         }
 
-        .search-bar buttonhover {
-            background #e8dcdc;
+        .search-bar button:hover {
+            background: #e8dcdc;
         }
 
         .categories {
-            display flex;
-            flex-wrap wrap;
-            gap 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .category-btn {
-            background none;
-            border 1px solid #e9dbdb;
-            padding 10px 22px;
-            border-radius 40px;
-            font-size 0.95rem;
-            color #3f3f52;
-            cursor default;
-            background-color #fcfafa;
-            transition all 0.15s;
+            background: none;
+            border: 1px solid #e9dbdb;
+            padding: 10px 22px;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            color: #3f3f52;
+            cursor: default;
+            background-color: #fcfafa;
+            transition: all 0.15s;
         }
 
         .category-btn i {
-            margin-right 6px;
-            font-size 0.85rem;
-            color #b09c9c;
+            margin-right: 6px;
+            font-size: 0.85rem;
+            color: #b09c9c;
         }
 
-        .category-btnhover {
-            background-color #f5eeee;
-            border-color #d6c2c2;
+        .category-btn:hover {
+            background-color: #f5eeee;
+            border-color: #d6c2c2;
         }
 
-         --- Каталог (сетка товаров) --- 
+        /* --- Каталог (сетка товаров) --- */
         .catalog-header {
-            margin 30px 0 15px;
-            display flex;
-            justify-content space-between;
-            align-items center;
+            margin: 30px 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .catalog-header h2 {
-            font-weight 400;
-            font-size 1.8rem;
-            color #312f3a;
+            font-weight: 400;
+            font-size: 1.8rem;
+            color: #312f3a;
         }
 
         .catalog-header p {
-            color #8e8ba0;
-            font-size 0.95rem;
+            color: #8e8ba0;
+            font-size: 0.95rem;
         }
 
         .product-grid {
-            display grid;
-            grid-template-columns repeat(auto-fill, minmax(240px, 1fr));
-            gap 30px 20px;
-            margin 20px 0 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 30px 20px;
+            margin: 20px 0 50px;
         }
 
         .product-card {
-            background-color #ffffff;
-            border-radius 20px;
-            padding 20px 15px 20px;
-            box-shadow 0 5px 18px rgba(0, 0, 0, 0.02), 0 0 0 1px #f7f0f0 inset;
-            transition transform 0.15s, box-shadow 0.2s;
-            display flex;
-            flex-direction column;
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 20px 15px 20px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.02), 0 0 0 1px #f7f0f0 inset;
+            transition: transform 0.15s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
         }
 
-        .product-cardhover {
-            transform translateY(-4px);
-            box-shadow 0 12px 24px rgba(0, 0, 0, 0.03), 0 0 0 1px #e6d7d7 inset;
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.03), 0 0 0 1px #e6d7d7 inset;
         }
 
         .product-image {
-            width 100%;
-            aspect-ratio 1  1;
-            background #faf6f3;
-            border-radius 16px;
-            display flex;
-            align-items center;
-            justify-content center;
-            margin-bottom 15px;
-            color #cdbcb0;
-            font-size 2.5rem;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background: #faf6f3;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: #cdbcb0;
+            font-size: 2.5rem;
         }
 
         .product-category {
-            font-size 0.8rem;
-            text-transform uppercase;
-            letter-spacing 0.5px;
-            color #b7a4a4;
-            margin-bottom 5px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #b7a4a4;
+            margin-bottom: 5px;
         }
 
         .product-title {
-            font-weight 600;
-            font-size 1.15rem;
-            margin-bottom 6px;
-            color #282634;
+            font-weight: 600;
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+            color: #282634;
         }
 
         .product-description {
-            font-size 0.9rem;
-            color #6f6b80;
-            margin-bottom 15px;
-            line-height 1.4;
-            flex 1;
+            font-size: 0.9rem;
+            color: #6f6b80;
+            margin-bottom: 15px;
+            line-height: 1.4;
+            flex: 1;
         }
 
         .product-footer {
-            display flex;
-            align-items center;
-            justify-content space-between;
-            margin-top 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 5px;
         }
 
         .product-price {
-            font-size 1.3rem;
-            font-weight 500;
-            color #2b2b3b;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #2b2b3b;
         }
 
         .product-price small {
-            font-size 0.8rem;
-            font-weight 300;
-            color #9b92a8;
+            font-size: 0.8rem;
+            font-weight: 300;
+            color: #9b92a8;
         }
 
         .btn-add {
-            background #f7f1f1;
-            border none;
-            width 44px;
-            height 44px;
-            border-radius 50%;
-            font-size 1.2rem;
-            color #4c4c63;
-            cursor default;
-            transition 0.15s;
-            display flex;
-            align-items center;
-            justify-content center;
+            background: #f7f1f1;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            color: #4c4c63;
+            cursor: default;
+            transition: 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .btn-addhover {
-            background #e3d5d5;
-            color #1e1e2a;
+        .btn-add:hover {
+            background: #e3d5d5;
+            color: #1e1e2a;
         }
 
-         --- Баннер с вдохновением --- 
+        /* --- Баннер с вдохновением --- */
         .inspire-banner {
-            background #fbf8f5;
-            border-radius 30px;
-            padding 35px 40px;
-            margin 40px 0 30px;
-            display flex;
-            flex-wrap wrap;
-            align-items center;
-            justify-content space-between;
+            background: #fbf8f5;
+            border-radius: 30px;
+            padding: 35px 40px;
+            margin: 40px 0 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .inspire-text h3 {
-            font-size 1.7rem;
-            font-weight 350;
-            color #2b2738;
+            font-size: 1.7rem;
+            font-weight: 350;
+            color: #2b2738;
         }
 
         .inspire-text p {
-            color #6e6a7c;
-            max-width 500px;
-            margin-top 8px;
+            color: #6e6a7c;
+            max-width: 500px;
+            margin-top: 8px;
         }
 
         .shop-btn {
-            background #2b2738;
-            color white;
-            border none;
-            padding 14px 38px;
-            border-radius 40px;
-            font-size 1rem;
-            font-weight 500;
-            cursor default;
-            transition 0.2s;
-            letter-spacing 0.3px;
+            background: #2b2738;
+            color: white;
+            border: none;
+            padding: 14px 38px;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: default;
+            transition: 0.2s;
+            letter-spacing: 0.3px;
         }
 
-        .shop-btnhover {
-            background #433f58;
+        .shop-btn:hover {
+            background: #433f58;
         }
 
-         --- подвал --- 
+        /* --- подвал --- */
         .footer {
-            margin-top 70px;
-            padding 30px 0 40px;
-            border-top 1px solid #f0e4e4;
-            color #7f7b92;
-            font-size 0.9rem;
-            display flex;
-            flex-wrap wrap;
-            justify-content space-between;
-            gap 30px;
+            margin-top: 70px;
+            padding: 30px 0 40px;
+            border-top: 1px solid #f0e4e4;
+            color: #7f7b92;
+            font-size: 0.9rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
         }
 
         .footer-links {
-            display flex;
-            gap 50px;
-            flex-wrap wrap;
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
-            text-decoration none;
-            color #68647a;
-            margin-right 25px;
-            cursor default;
+            text-decoration: none;
+            color: #68647a;
+            margin-right: 25px;
+            cursor: default;
         }
 
-        .footer-links ahover {
-            color #b39f9f;
+        .footer-links a:hover {
+            color: #b39f9f;
         }
 
         .social i {
-            font-size 1.2rem;
-            margin-left 20px;
-            color #9f9bb3;
-            cursor default;
+            font-size: 1.2rem;
+            margin-left: 20px;
+            color: #9f9bb3;
+            cursor: default;
         }
 
-        .social ihover {
-            color #c3b1b1;
+        .social i:hover {
+            color: #c3b1b1;
         }
 
-         для красоты микро 
+        /* для красоты микро */
         .badge {
-            background #efeae3;
-            border-radius 30px;
-            padding 3px 10px;
-            font-size 0.7rem;
-            color #685e5e;
+            background: #efeae3;
+            border-radius: 30px;
+            padding: 3px 10px;
+            font-size: 0.7rem;
+            color: #685e5e;
         }
 
         hr {
-            border none;
-            border-top 1px dashed #f0e0e0;
-            margin 10px 0;
+            border: none;
+            border-top: 1px dashed #f0e0e0;
+            margin: 10px 0;
         }
 
-    style
-head
-body
-    !-- ШАПКА СЛЕВА СВЕРХУ Handy --
-    div class=header
-        div class=container
-            div class=logo-area
-                div class=logoHandyspanspandiv
-                div class=taglinemade with souldiv
-            div
-            div class=nav-icons
-                i class=far fa-hearti
-                i class=far fa-useri
-                i class=fas fa-shopping-bagi
-            div
-        div
-    div
+    </style>
+</head>
+<body>
+    <!-- ШАПКА: СЛЕВА СВЕРХУ Handy -->
+    <div class="header">
+        <div class="container">
+            <div class="logo-area">
+                <div class="logo">Handy<span>.</span></div>
+                <div class="tagline">для творческих людей</div>
+            </div>
+            <div class="nav-icons">
+                <i class="far fa-heart"></i>
+                <i class="far fa-user"></i>
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+        </div>
+    </div>
 
-    div class=container
-        !-- панель поиска + категории быстрые --
-        div class=toolbar
-            div class=search-bar
-                input type=text placeholder=Поиск пряжи, бисера, наборов...
-                buttoni class=fas fa-searchi Найтиbutton
-            div
-            div class=categories
-                span class=category-btni class=fas fa-tagiВсеspan
-                span class=category-btni class=fas fa-tshirtiПряжаspan
-                span class=category-btni class=fas fa-circleiБисерspan
-                span class=category-btni class=fas fa-cutiВышивкаspan
-                span class=category-btni class=fas fa-paint-brushiДекорspan
-            div
-        div
+    <div class="container">
+        <!-- панель поиска + категории быстрые -->
+        <div class="toolbar">
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск пряжи, бисера, наборов...">
+                <button><i class="fas fa-search"></i> Найти</button>
+            </div>
+            <div class="categories">
+                <span class="category-btn"><i class="fas fa-tag"></i>Все</span>
+                <span class="category-btn"><i class="fas fa-tshirt"></i>Пряжа</span>
+                <span class="category-btn"><i class="fas fa-circle"></i>Бисер</span>
+                <span class="category-btn"><i class="fas fa-cut"></i>Вышивка</span>
+                <span class="category-btn"><i class="fas fa-paint-brush"></i>Декор</span>
+            </div>
+        </div>
 
-        !-- Заголовок каталога и количество товаров (для вида) --
-        div class=catalog-header
-            h2Каталог рукоделияh2
-            pпоказано 12 из 48 товаров span class=badgeхиты продажspanp
-        div
+        <!-- Заголовок каталога и количество товаров (для вида) -->
+        <div class="catalog-header">
+            <h2>Каталог рукоделия</h2>
+            <p>показано 12 из 48 товаров <span class="badge">хиты продаж</span></p>
+        </div>
 
-        !-- СЕТКА ТОВАРОВ (каталог) --
-        div class=product-grid
-            !-- карточка 1 --
-            div class=product-card
-                div class=product-imagei class=fas fa-swatchbookidiv
-                div class=product-categoryНабор для вышиванияdiv
-                div class=product-title«Пион»div
-                div class=product-descriptionмулине, канва, игла, схема. 15х15 смdiv
-                div class=product-footer
-                    span class=product-price890 small₽smallspan
-                    span class=btn-addi class=fas fa-shopping-cartispan
-                div
-            div
-            !-- карточка 2 --
-            div class=product-card
-                div class=product-imagei class=fas fa-rainbowidiv
-                div class=product-categoryПряжаdiv
-                div class=product-titleMerino Royaldiv
-                div class=product-description100% меринос, 50г125м, цвет лавандаdiv
-                div class=product-footer
-                    span class=product-price450 small₽smallspan
-                    span class=btn-addi class=fas fa-shopping-cartispan
-                div
-            div
-            !-- карточка 3 --
-            div class=product-card
-                div class=product-imagei class=fas fa-gemidiv
-                div class=product-categoryБисерdiv
-                div class=product-titleЧешский бисер Preciosadiv
-                div class=product-description10 цветов в наборе, 20 гdiv
-                div class=product-footer
-                    span class=product-price650 small₽smallspan
-                    span class=btn-addi class=fas fa-shopping-cartispan
-                div
-            div
-            !-- карточка 4 --
-            div class=product-card
-                div class=product-imagei class=fas fa-scrollidiv
-                div class=product-categoryСкрапбукингdiv
-                div class=product-titleБумага «Винтаж»div
-                div class=product-descriptionнабор 30x30, 12 листов, плотность 250 гdiv
-                div class=product-footer
-                    span class=product-price720 small₽smallspan
-                    span class=btn-addi class=fas fa-shopping-cartispan
-                div
-            div
-            !-- карточка 5 --
-            div class=product-card
-                div class=product-imagei class=fas fa-maskidiv
-                div class=product-categoryЛепкаdiv
-                div class=product-titleПолимерная глинаdiv
-                div class=product-description24 цвета, запекаемая, 400 гdiv
-                div class=product-footer
-                    span class=product-price1340 small₽smallspan
-                    span class=btn-addi class=fas fa-shopping-cartispan
-                div
-            div
-            !-- карточка 6 --
-            div class=product-card
-                div class=product-imagei class=fas fa-threadidiv
-                div class=product-categoryВышиваниеdiv
-                div class=product-titleПяльцы деревянныеdiv
-                div class=product-descriptionдиаметр 20 см, бук, регулировкаdiv
-                div class=product-footer
-                    span class=product-price390 small₽smallspan
-                    span class=btn-addi class=fas fa-shopping-cartispan
-                div
-            div
-        div
+        <!-- СЕТКА ТОВАРОВ (каталог) -->
+        <div class="product-grid">
+            <!-- карточка 1 -->
+            <div class="product-card">
+                <div class="product-image"><i class="fas fa-swatchbook"></i></div>
+                <div class="product-category">Набор для вышивания</div>
+                <div class="product-title">«Пион»</div>
+                <div class="product-description">мулине, канва, игла, схема. 15х15 см</div>
+                <div class="product-footer">
+                    <span class="product-price">890 <small>₽</small></span>
+                    <span class="btn-add"><i class="fas fa-shopping-cart"></i></span>
+                </div>
+            </div>
+            <!-- карточка 2 -->
+            <div class="product-card">
+                <div class="product-image"><i class="fas fa-rainbow"></i></div>
+                <div class="product-category">Пряжа</div>
+                <div class="product-title">Merino Royal</div>
+                <div class="product-description">100% меринос, 50г/125м, цвет лаванда</div>
+                <div class="product-footer">
+                    <span class="product-price">450 <small>₽</small></span>
+                    <span class="btn-add"><i class="fas fa-shopping-cart"></i></span>
+                </div>
+            </div>
+            <!-- карточка 3 -->
+            <div class="product-card">
+                <div class="product-image"><i class="fas fa-gem"></i></div>
+                <div class="product-category">Бисер</div>
+                <div class="product-title">Чешский бисер Preciosa</div>
+                <div class="product-description">10 цветов в наборе, 20 г</div>
+                <div class="product-footer">
+                    <span class="product-price">650 <small>₽</small></span>
+                    <span class="btn-add"><i class="fas fa-shopping-cart"></i></span>
+                </div>
+            </div>
+            <!-- карточка 4 -->
+            <div class="product-card">
+                <div class="product-image"><i class="fas fa-scroll"></i></div>
+                <div class="product-category">Скрапбукинг</div>
+                <div class="product-title">Бумага «Винтаж»</div>
+                <div class="product-description">набор 30x30, 12 листов, плотность 250 г</div>
+                <div class="product-footer">
+                    <span class="product-price">720 <small>₽</small></span>
+                    <span class="btn-add"><i class="fas fa-shopping-cart"></i></span>
+                </div>
+            </div>
+            <!-- карточка 5 -->
+            <div class="product-card">
+                <div class="product-image"><i class="fas fa-mask"></i></div>
+                <div class="product-category">Лепка</div>
+                <div class="product-title">Полимерная глина</div>
+                <div class="product-description">24 цвета, запекаемая, 400 г</div>
+                <div class="product-footer">
+                    <span class="product-price">1340 <small>₽</small></span>
+                    <span class="btn-add"><i class="fas fa-shopping-cart"></i></span>
+                </div>
+            </div>
+            <!-- карточка 6 -->
+            <div class="product-card">
+                <div class="product-image"><i class="fas fa-thread"></i></div>
+                <div class="product-category">Вышивание</div>
+                <div class="product-title">Пяльцы деревянные</div>
+                <div class="product-description">диаметр 20 см, бук, регулировка</div>
+                <div class="product-footer">
+                    <span class="product-price">390 <small>₽</small></span>
+                    <span class="btn-add"><i class="fas fa-shopping-cart"></i></span>
+                </div>
+            </div>
+        </div>
 
-        !-- блок с вдохновением (доп навигация для покупок) --
-        div class=inspire-banner
-            div class=inspire-text
-                h3Вдохновение для новых шедевров ✨h3
-                pАвторские наборы, редкая фурнитура и тёплое общение в нашем клубе рукодельниц.p
-            div
-            span class=shop-btnКоллекция весна i class=fas fa-arrow-rightispan
-        div
+        <!-- блок с вдохновением (доп навигация для покупок) -->
+        <div class="inspire-banner">
+            <div class="inspire-text">
+                <h3>Вдохновение для новых шедевров ✨</h3>
+                <p>Авторские наборы, редкая фурнитура и тёплое общение в нашем клубе рукодельниц.</p>
+            </div>
+            <span class="shop-btn">Коллекция весна <i class="fas fa-arrow-right"></i></span>
+        </div>
 
-        !-- Дополнительные ссылки на разделы каталога (быстрые переходы) --
-        div style=display flex; gap 20px; flex-wrap wrap; justify-content space-between; margin 30px 0;
-            span style=color #57546b;i class=fas fa-chevron-righti Новые поступленияspan
-            span style=color #57546b;i class=fas fa-chevron-righti Наборы для начинающихspan
-            span style=color #57546b;i class=fas fa-chevron-righti Лидеры продажspan
-            span style=color #57546b;i class=fas fa-chevron-righti Подарочные сертификатыspan
-        div
+        <!-- Дополнительные ссылки на разделы каталога (быстрые переходы) -->
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: space-between; margin: 30px 0;">
+            <span style="color: #57546b;"><i class="fas fa-chevron-right"></i> Новые поступления</span>
+            <span style="color: #57546b;"><i class="fas fa-chevron-right"></i> Наборы для начинающих</span>
+            <span style="color: #57546b;"><i class="fas fa-chevron-right"></i> Лидеры продаж</span>
+            <span style="color: #57546b;"><i class="fas fa-chevron-right"></i> Подарочные сертификаты</span>
+        </div>
 
-        !-- Футер с контактами и соц сетями --
-        div class=footer
-            div© Handy, 2025 — всё для рукоделия с заботойdiv
-            div class=footer-links
-                aКаталогa
-                aДоставкаa
-                aО насa
-                aБлогa
-            div
-            div class=social
-                i class=fab fa-telegrami
-                i class=fab fa-vki
-                i class=fab fa-pinteresti
-            div
-        div
+        <!-- Футер с контактами и соц сетями -->
+        <div class="footer">
+            <div>© Handy, 2025 — всё для рукоделия с заботой</div>
+            <div class="footer-links">
+                <a>Каталог</a>
+                <a>Доставка</a>
+                <a>О нас</a>
+                <a>Блог</a>
+            </div>
+            <div class="social">
+                <i class="fab fa-telegram"></i>
+                <i class="fab fa-vk"></i>
+                <i class="fab fa-pinterest"></i>
+            </div>
+        </div>
 
-        !-- мелкая линия и акцент на том, что можно купить --
-        hr
-        p style=text-alignright; font-size0.8rem; color#bfb5b5; padding-bottom 20px; 
-            i class=fas fa-heart style=color #f3b9b9;i  создано для уюта и покупок
-        p
-    div
-body
-html
+        <!-- мелкая линия и акцент на том, что можно купить -->
+        <hr>
+        <p style="text-align:right; font-size:0.8rem; color:#bfb5b5; padding-bottom: 20px;"> 
+            <i class="fas fa-heart" style="color: #f3b9b9;"></i>  создано для уюта и покупок
+        </p>
+    </div>
+</body>
+</html>
